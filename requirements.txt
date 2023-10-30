@@ -22,6 +22,7 @@ multidict==6.0.4
 mypy-extensions==1.0.0
 packaging==23.2
 pathspec==0.11.2
+phonenumbers==8.13.23
 platformdirs==3.11.0
 prompt-toolkit==3.0.39
 PyJWT==2.8.0
