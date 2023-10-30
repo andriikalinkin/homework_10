@@ -7,12 +7,10 @@ client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
 
 @shared_task
 def send_sms(recipient, message):
-    print("Hello, Celery!")
-
     message = client.messages.create(
-        body=message,  # "Hello from outer space!"
+        body=message,
         from_="+12183217099",
-        to=recipient  # "+4796869214"
+        to=recipient,
     )
 
     return message.sid
