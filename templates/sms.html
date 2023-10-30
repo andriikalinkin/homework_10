@@ -5,6 +5,10 @@
     <title>SMS</title>
 </head>
 <body>
-    <h1>SMS page</h1>
+    <h1>Send sms page</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="OK">
 </body>
 </html>
