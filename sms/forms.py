@@ -20,7 +20,7 @@ class SmsForm(forms.Form):
 
     def clean_message(self):
         cleaned_data = self.cleaned_data.get("message")
-        if len(cleaned_data) < 30:
+        if len(cleaned_data) > 30:
             raise forms.ValidationError(
                 "Message length should be 30 characters or less"
             )
